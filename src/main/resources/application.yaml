@@ -1,3 +1,6 @@
-management.endpoints.web.exposure.include: prometheus
+logging:
+  file.path: ./logs
+  level.de.slauth: DEBUG
+  structured.format.file: logstash
 
-spring.application.name: dev-prod-o11y-parity
+management.endpoints.web.exposure.include: prometheus

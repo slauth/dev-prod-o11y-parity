@@ -1,0 +1,121 @@
+= Dev/prod parity: for your favourite observability stack
+:customcss: slides.css
+:imagesdir: images
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js
+:revealjs_hash: true
+:revealjs_height: 1080
+:revealjs_history: true
+:revealjs_totalTime: 1800
+:revealjs_width: 1920
+:title-slide-background-image: title-background.jpg
+
+== About Me 👋
+
+// TODO image
+
+* Sebastian Lauth
+* [.line-through]#grandcentrix# Vodafone
+* in the Java world since 2005
+
+== Dev/prod parity
+
+huh? 🤔
+
+=== The 12 Factor App Manifest
+
+https://12factor.net/[12factor.net]
+
+[%notitle]
+[transition=none]
+=== The 12 Factors 1/3
+
+image::12factor.net.png[background, size=contain]
+
+[%notitle]
+[transition=none]
+=== The 12 Factors 2/3
+
+image::12factor.net_marked.png[background, size=contain]
+
+[%notitle]
+[transition=none]
+=== The 12 Factors 3/3
+
+image::12factor.net_focus.png[background, size=contain]
+
+[.notes]
+--
+development environment:: a local deploy of the app where a developer makes live edits
+--
+
+[.columns]
+[transition=none]
+=== Database:
+
+[.column]
+--
+
+[step=2]
+image::database-dev.png[height=194px]
+`dev`
+--
+
+[.column]
+--
+
+[step=1]
+image::database-prod.png[height=194px]
+`prod`
+--
+
+[.columns]
+[transition=none]
+=== Database:
+
+[.column]
+--
+image::database-prod.png[height=194px]
+`dev`
+--
+
+[.column]
+--
+image::database-prod.png[height=194px]
+`prod`
+--
+
+[.columns]
+=== Observability:
+
+[.column]
+--
+
+[step=2]
+image::o11y-dev.jpg[width=90%]
+`dev`
+--
+
+[.column]
+--
+
+[step=1]
+image::o11y-prod.jpg[width=90%]
+`prod`
+--
+
+=== Observability Deployments 🙀
+
+image::complex-o11y-deployment.jpg[]
+
+[.ref]
+Image by Bibin Kuruvilla (https://medium.com/@bibinkuruvilla/comprehensive-guide-in-setting-up-the-three-pillars-of-observability-in-kubernetes-cluster-within-4a7e01d3dec[medium.com/@bibinkuruvilla])
+
+== Slide Two
+
+image::excalidraw.svg[width=100%]
+
+[.notes]
+--
+- tell anecdote
+- make a point
+--
