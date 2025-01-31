@@ -3,5 +3,6 @@
     font-style: italic;
 }
 .line-through {
+    color: #777;
     text-decoration: line-through;
 }

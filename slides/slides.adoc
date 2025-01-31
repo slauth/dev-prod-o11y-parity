@@ -15,7 +15,7 @@
 
 * Sebastian Lauth
 * [.line-through]#grandcentrix# Vodafone
-* in the Java world since 2005
+* Java dev since 2005
 
 == Dev/prod parity
 
@@ -110,9 +110,19 @@ image::complex-o11y-deployment.jpg[]
 [.ref]
 Image by Bibin Kuruvilla (https://medium.com/@bibinkuruvilla/comprehensive-guide-in-setting-up-the-three-pillars-of-observability-in-kubernetes-cluster-within-4a7e01d3dec[medium.com/@bibinkuruvilla])
 
-== Slide Two
+[transition=none]
+== Local Setup
+image::local-setup-1.svg[height=100%]
 
-image::excalidraw.svg[width=100%]
+[transition=none]
+=== Local Setup
+image::local-setup-2.svg[height=100%]
+
+[transition=none]
+=== Local Setup
+image::local-setup-3.svg[height=100%]
+
+== Thank You
 
 [.notes]
 --
