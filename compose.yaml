@@ -9,22 +9,17 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DS_PROMETHEUS: prometheus
       GF_AUTH_ANONYMOUS_ENABLED: "true"
       GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
       GF_AUTH_DISABLE_LOGIN_FORM: "true"
 
   loki:
     image: grafana/loki:3.3.2
-    ports:
-      - "3100:3100"
 
   prometheus:
     image: prom/prometheus:v3.1.0
     volumes:
       - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
-    ports:
-      - "9090:9090"
     extra_hosts:
       - host.docker.internal:host-gateway
 
