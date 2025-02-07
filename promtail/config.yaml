@@ -4,8 +4,7 @@ client:
 scrape_configs:
   - job_name: spring
     static_configs:
-      - targets:
-          - localhost
+      - targets: [localhost]
         labels:
           app: dev-prod-o11y-parity
           env: local

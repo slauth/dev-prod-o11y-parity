@@ -1,0 +1,17 @@
+### 5 star review
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "description": "all good",
+  "stars": 5
+}
+
+### Bad Request
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "description": "really awesome",
+  "stars": 42
+}

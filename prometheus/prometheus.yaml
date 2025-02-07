@@ -1,12 +1,9 @@
-global:
-  scrape_interval: 5s
-
 scrape_configs:
   - job_name: spring-boot
+    scrape_interval: 5s
     metrics_path: /actuator/prometheus
     static_configs:
-      - labels:
+      - targets: [host.docker.internal:8080]
+        labels:
           app: dev-prod-o11y-parity
           env: local
-        targets:
-          - host.docker.internal:8080

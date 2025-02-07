@@ -1,11 +1,10 @@
 services:
 
   grafana:
-    image: grafana/grafana:11.3.1
+    image: grafana/grafana
     volumes:
-      - ./grafana/dashboards:/dashboards
-      - ./grafana/dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yml
-      - ./grafana/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yml
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
     ports:
       - "3000:3000"
     environment:
@@ -14,18 +13,17 @@ services:
       GF_AUTH_DISABLE_LOGIN_FORM: "true"
 
   loki:
-    image: grafana/loki:3.3.2
+    image: grafana/loki
 
   prometheus:
-    image: prom/prometheus:v3.1.0
+    image: prom/prometheus
     volumes:
       - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
     extra_hosts:
       - host.docker.internal:host-gateway
 
   promtail:
-    image: grafana/promtail:3.3.2
+    image: grafana/promtail
     volumes:
-      - ./logs:/var/log/spring
+      - ./promtail/logs:/var/log/spring
       - ./promtail/config.yaml:/etc/promtail/config.yml
-    command: -config.file=/etc/promtail/config.yml
