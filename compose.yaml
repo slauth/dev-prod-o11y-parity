@@ -27,3 +27,11 @@ services:
     volumes:
       - ./promtail/logs:/var/log/spring
       - ./promtail/config.yaml:/etc/promtail/config.yml
+
+  tempo:
+    image: grafana/tempo
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./tempo/tempo.yaml:/etc/tempo.yaml
+    ports:
+      - "4318:4318"

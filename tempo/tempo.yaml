@@ -1,0 +1,17 @@
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        http:
+          endpoint: "tempo:4318"
+
+server:
+  http_listen_port: 3200
+
+storage:
+  trace:
+    backend: local
+    wal:
+      path: /var/tempo/wal
+    local:
+      path: /var/tempo/blocks

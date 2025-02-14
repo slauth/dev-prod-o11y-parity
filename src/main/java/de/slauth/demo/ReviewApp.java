@@ -7,15 +7,22 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
+@SpringBootApplication
 @RequestMapping("/reviews")
-public class ReviewController {
+public class ReviewApp {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReviewController.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReviewApp.class);
+
+    public static void main(String[] args) {
+        SpringApplication.run(ReviewApp.class, args);
+    }
 
     @PostMapping
     @ResponseStatus(CREATED)
