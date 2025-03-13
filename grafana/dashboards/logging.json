@@ -85,7 +85,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -177,7 +178,7 @@
               "sort": "none"
             }
           },
-          "pluginVersion": "11.5.1",
+          "pluginVersion": "11.5.2",
           "targets": [
             {
               "datasource": {
@@ -186,7 +187,7 @@
               },
               "direction": "backward",
               "editorMode": "code",
-              "expr": "sum by (level) (rate({app=\"dev-prod-o11y-parity\"} | json [1m])) * 60",
+              "expr": "sum by (level) (rate({app=\"$app\", env=\"$env\"} | json [1m])) * 60",
               "legendFormat": "{{detected_level}}",
               "queryType": "range",
               "refId": "A"
@@ -304,7 +305,7 @@
               "sort": "none"
             }
           },
-          "pluginVersion": "11.5.1",
+          "pluginVersion": "11.5.2",
           "targets": [
             {
               "datasource": {
@@ -313,7 +314,7 @@
               },
               "direction": "backward",
               "editorMode": "code",
-              "expr": "sum by (level) (count_over_time({app=\"dev-prod-o11y-parity\"} | json [$__range]))",
+              "expr": "sum by (level) (count_over_time({app=\"$app\", env=\"$env\"} | json [$__range]))",
               "legendFormat": "{{level}}",
               "queryType": "range",
               "refId": "A"
@@ -355,7 +356,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -385,7 +387,7 @@
             },
             "showHeader": true
           },
-          "pluginVersion": "11.5.1",
+          "pluginVersion": "11.5.2",
           "targets": [
             {
               "datasource": {
@@ -394,7 +396,7 @@
               },
               "direction": "backward",
               "editorMode": "code",
-              "expr": "{app=\"dev-prod-o11y-parity\"} |= \"Received new review\" | json | review_stars=~\"$review_stars\"",
+              "expr": "{app=\"$app\", env=\"$env\"} |= \"Received new review\" | json | review_stars=~\"$review_stars\"",
               "queryType": "range",
               "refId": "A"
             }
@@ -579,7 +581,7 @@
               "sort": "none"
             }
           },
-          "pluginVersion": "11.5.1",
+          "pluginVersion": "11.5.2",
           "targets": [
             {
               "datasource": {
@@ -588,7 +590,7 @@
               },
               "direction": "backward",
               "editorMode": "code",
-              "expr": "sum by (review_stars) (count_over_time({app=\"dev-prod-o11y-parity\"} |= \"Received new review\" | json | review_stars=~\"$review_stars\" [$__range]))",
+              "expr": "sum by (review_stars) (count_over_time({app=\"$app\", env=\"$env\"} |= \"Received new review\" | json | review_stars=~\"$review_stars\" [$__range]))",
               "legendFormat": "{{review_stars}} ⭐",
               "queryType": "range",
               "refId": "A"
@@ -650,7 +652,7 @@
           },
           "direction": "forward",
           "editorMode": "code",
-          "expr": "{app=\"dev-prod-o11y-parity\"} | json | line_format \"  {{alignLeft 5 .level}}   {{.message}}\"",
+          "expr": "{app=\"$app\", env=\"$env\"} | json | line_format \"  {{alignLeft 5 .level}}   {{.message}}\"",
           "queryType": "range",
           "refId": "A"
         }
@@ -665,6 +667,52 @@
   "tags": [],
   "templating": {
     "list": [
+      {
+        "current": {
+          "text": "dev-prod-o11y-parity",
+          "value": "dev-prod-o11y-parity"
+        },
+        "datasource": {
+          "type": "loki",
+          "uid": "loki"
+        },
+        "definition": "",
+        "name": "app",
+        "options": [],
+        "query": {
+          "label": "app",
+          "refId": "LokiVariableQueryEditor-VariableQuery",
+          "stream": "",
+          "type": 1
+        },
+        "refresh": 1,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "local",
+          "value": "local"
+        },
+        "datasource": {
+          "type": "loki",
+          "uid": "loki"
+        },
+        "definition": "",
+        "name": "env",
+        "options": [],
+        "query": {
+          "label": "env",
+          "refId": "LokiVariableQueryEditor-VariableQuery",
+          "stream": "",
+          "type": 1
+        },
+        "refresh": 1,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      },
       {
         "allValue": "[1-5]",
         "allowCustomValue": false,
