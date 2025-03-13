@@ -17,6 +17,9 @@
 * Java dev since 2005
 * [.line-through]#grandcentrix# Vodafone
 
+== [.line-through]#Your# My favourite observability stack
+image::o11y-stack.svg[height=100%]
+
 == Dev/prod parity
 
 huh? 🤔
@@ -42,6 +45,9 @@ image::12factor.net_marked.png[background, size=contain]
 === The 12 Factors 3/3
 
 image::12factor.net_focus.png[background, size=contain]
+
+=== Dev/prod parity
+Keep development, staging, and production as similar as possible
 
 [.notes]
 --
