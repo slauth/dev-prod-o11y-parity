@@ -14,8 +14,8 @@
 // TODO image
 
 * Sebastian Lauth
-* [.line-through]#grandcentrix# Vodafone
 * Java dev since 2005
+* [.line-through]#grandcentrix# Vodafone
 
 == Dev/prod parity
 
