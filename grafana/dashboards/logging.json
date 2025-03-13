@@ -85,8 +85,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -356,8 +355,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -643,7 +641,7 @@
         "sortOrder": "Ascending",
         "wrapLogMessage": false
       },
-      "pluginVersion": "11.5.1",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -652,7 +650,7 @@
           },
           "direction": "forward",
           "editorMode": "code",
-          "expr": "{app=\"dev-prod-o11y-parity\"} | json | line_format \"{{alignLeft 5 .level}} --- {{alignLeft 32 .logger_name}}: {{.message}}\"",
+          "expr": "{app=\"dev-prod-o11y-parity\"} | json | line_format \"  {{alignLeft 5 .level}}   {{.message}}\"",
           "queryType": "range",
           "refId": "A"
         }
