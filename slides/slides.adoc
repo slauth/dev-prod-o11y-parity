@@ -5,6 +5,7 @@
 :revealjs_hash: true
 :revealjs_height: 1080
 :revealjs_history: true
+:revealjs_pdfseparatefragments: false
 :revealjs_totalTime: 1800
 :revealjs_width: 1920
 :title-slide-background-image: title-background.jpg
@@ -153,3 +154,19 @@ image::qr.png[]
 
 [.ref]
 https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-parity]
+
+== Wrap-up
+
+* observability tooling isn't _that_ hard to set up locally
+** 37 lines of Docker Compose YAML
+** 66 lines of container config
+** ✅
+* can be useful when
+** your organization utilizes GitOps principles
+** implementing new features (with observability in mind)
+** doing local load testing
+** …
+
+=== 🙏 Thank you 🙏
+
+❓️ Questions ❓️
