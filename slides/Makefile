@@ -8,3 +8,6 @@ build:
 
 open:
 	x-www-browser http://localhost/slides.html
+
+open-pdf-print:
+	x-www-browser http://localhost/slides.html?print-pdf
