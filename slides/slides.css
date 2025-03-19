@@ -1,8 +1,11 @@
-.ref {
-    font-size: 21px;
-    font-style: italic;
-}
 .line-through {
     color: #777;
     text-decoration: line-through;
+}
+.pr-2 {
+    padding-right: 40px;
+}
+.ref {
+    font-size: 21px;
+    font-style: italic;
 }
