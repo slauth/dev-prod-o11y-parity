@@ -1,5 +1,29 @@
 services:
 
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  tempo:
+    image: grafana/tempo
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./tempo/tempo.yaml:/etc/tempo.yaml
+    ports:
+      - "4318:4318"
+
+  loki:
+    image: grafana/loki
+
+  promtail:
+    image: grafana/promtail
+    volumes:
+      - ./promtail/logs:/var/log/spring
+      - ./promtail/config.yaml:/etc/promtail/config.yml
+
   grafana:
     image: grafana/grafana
     volumes:
@@ -11,27 +35,3 @@ services:
       GF_AUTH_ANONYMOUS_ENABLED: "true"
       GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
       GF_AUTH_DISABLE_LOGIN_FORM: "true"
-
-  loki:
-    image: grafana/loki
-
-  prometheus:
-    image: prom/prometheus
-    volumes:
-      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
-    extra_hosts:
-      - host.docker.internal:host-gateway
-
-  promtail:
-    image: grafana/promtail
-    volumes:
-      - ./promtail/logs:/var/log/spring
-      - ./promtail/config.yaml:/etc/promtail/config.yml
-
-  tempo:
-    image: grafana/tempo
-    command: [ "-config.file=/etc/tempo.yaml" ]
-    volumes:
-      - ./tempo/tempo.yaml:/etc/tempo.yaml
-    ports:
-      - "4318:4318"
