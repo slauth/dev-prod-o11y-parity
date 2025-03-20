@@ -1,4 +1,4 @@
-= Dev/prod parity: for your favourite observability stack
+= 🟰 Dev/prod parity 🟰: 📊 for your favourite observability stack 📈
 :customcss: slides.css
 :imagesdir: images
 :revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js
@@ -14,16 +14,16 @@
 == About Me 👋
 
 [.column.has-text-right.pr-2p]
-image::me.jpg[height=300px]
+image::me.png[height=300px]
 
 [.column.has-text-left]
 * Sebastian Lauth
-* Java dev since 2005
+* Java dev since 2005 ☕️
 * [.line-through]#grandcentrix# Vodafone
 [%step]
-** backends for IoT devices
+** building backends for IoT devices 🧑‍💻
 
-== [.line-through]#Your# My favourite observability stack
+=== [.line-through]#Your# My favourite observability stack
 
 [.stretch]
 image::o11y-stack.svg[]
@@ -119,7 +119,6 @@ image::o11y-prod.jpg[width=90%]
 
 === Observability Deployments 🙀
 
-[.stretch]
 image::complex-o11y-deployment.jpg[]
 
 [.ref]
@@ -145,7 +144,15 @@ image::local-setup-3.svg[]
 
 [transition=none]
 === Local Setup
-// TODO rearrange and add Tempo
+
+[.stretch]
+image::local-setup-4.svg[]
+
+[transition=none]
+=== Local Setup
+
+[.stretch]
+image::local-setup-final.svg[]
 
 == Demo
 
