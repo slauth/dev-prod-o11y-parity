@@ -2,11 +2,12 @@
 :customcss: slides.css
 :imagesdir: images
 :revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js
+:revealjs_controlsTutorial: false
+:revealjs_fragmentInURL: true
 :revealjs_hash: true
 :revealjs_height: 1080
 :revealjs_history: true
 :revealjs_pdfseparatefragments: false
-:revealjs_totalTime: 1800
 :revealjs_width: 1920
 :title-slide-background-image: title-background.jpg
 
