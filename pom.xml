@@ -15,19 +15,6 @@
 	<artifactId>dev-prod-o11y-parity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>dev-prod-o11y-parity</name>
-	<description>
-		Demo project for my talk “Dev/prod parity for your favourite observability stack”
-	</description>
-	<url>https://github.com/slauth/dev-prod-o11y-parity</url>
-
-	<licenses>
-		<license>
-			<name>MIT</name>
-			<url>https://opensource.org/license/mit</url>
-		</license>
-	</licenses>
-
 	<properties>
 		<java.version>21</java.version>
 	</properties>
@@ -64,7 +51,6 @@
 			<artifactId>opentelemetry-exporter-otlp</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
