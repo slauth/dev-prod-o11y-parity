@@ -6,4 +6,4 @@ image::slides/images/local-setup-final-light.svg[]
 
 == Slides
 
-The source code of my slides (created with https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-reveal.js]) is also included link:./slides[here].
+The source code of my slides (created with https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-reveal.js]) is also included link:./slides/slides.adoc[here].
