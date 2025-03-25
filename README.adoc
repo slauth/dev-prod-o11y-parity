@@ -2,7 +2,7 @@
 
 This repository contains the source code of my little demo project -- a very simple https://spring.io/projects/spring-boot[Spring Boot] application accompanied by a locally running observability stack provided with https://docs.docker.com/compose/[Docker Compose]:
 
-image::slides/images/local-setup-final.svg[]
+image::slides/images/local-setup-final-light.svg[]
 
 == Slides
 
