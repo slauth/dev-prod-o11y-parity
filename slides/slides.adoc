@@ -175,6 +175,6 @@ https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-p
 ** doing local load testing
 ** …
 
-=== 🙏 Thank you 🙏
+== 🙏 Thank you 🙏
 
-❓️ Questions ❓️
+=== ❓️ Questions ❓️
