@@ -1,6 +1,5 @@
 logging:
   file.path: ./promtail/logs
-  level.de.slauth: DEBUG
   structured.format.file: logstash
 
 management:

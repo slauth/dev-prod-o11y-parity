@@ -27,7 +27,7 @@ public class ReviewApp {
     @PostMapping
     @ResponseStatus(CREATED)
     public void submitReview(@Valid @RequestBody Review review) {
-        logger.atDebug().setMessage("Received new review")
+        logger.atInfo().setMessage("Received new review")
                 .addKeyValue("review_description", review.description)
                 .addKeyValue("review_stars", review.stars)
                 .log();
