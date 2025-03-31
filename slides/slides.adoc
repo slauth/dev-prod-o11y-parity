@@ -165,15 +165,15 @@ https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-p
 
 == Wrap-up
 
-* observability tooling isn't _that_ hard to set up locally
-** 37 lines of Docker Compose YAML
-** 66 lines of container config
-** ✅
-* can be useful when
+* a local observability stack can be useful when
 ** your organization utilizes GitOps principles
 ** implementing new features (with observability in mind)
 ** doing local load testing
 ** …
+* it isn't _that_ hard to set up locally
+** 37 lines of Docker Compose YAML
+** 66 lines of container config
+** done ✅
 
 == 🙏 Thank you 🙏
 
