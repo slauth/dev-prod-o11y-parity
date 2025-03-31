@@ -3,6 +3,9 @@ all: clean build
 clean:
 	rm -f slides.html
 
+delete-logs:
+	rm -f ../promtail/logs/*.log ../promtail/logs/*.gz
+
 build:
 	docker run -u $$(id -u):$$(id -g) -v $$(pwd):/documents/ asciidoctor/docker-asciidoctor:1 asciidoctor-revealjs slides.adoc
 
