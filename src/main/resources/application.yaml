@@ -1,11 +1,5 @@
-logging:
-  file.path: ./promtail/logs
-  structured.format.file: logstash
-
 management:
   endpoints.web.exposure.include: prometheus
-  otlp.tracing.endpoint: http://localhost:4318/v1/traces
-  tracing.sampling.probability: 1.0
 
 spring:
   application.name: dev-prod-o11y-parity
