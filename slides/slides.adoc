@@ -39,19 +39,13 @@ https://12factor.net/[12factor.net]
 
 [%notitle]
 [transition=none]
-=== The 12 Factors 1/3
+=== The 12 Factors
 
 image::12factor.net.png[background, size=contain]
 
 [%notitle]
 [transition=none]
-=== The 12 Factors 2/3
-
-image::12factor.net_marked.png[background, size=contain]
-
-[%notitle]
-[transition=none]
-=== The 12 Factors 3/3
+=== The 12 Factors
 
 image::12factor.net_focus.png[background, size=contain]
 
@@ -155,13 +149,7 @@ image::local-setup-4.svg[]
 [.stretch]
 image::local-setup-final.svg[]
 
-== Demo
-
-[.stretch]
-image::qr.png[]
-
-[.ref]
-https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-parity]
+== 🧑‍💻 Demo 🧑‍💻
 
 == Wrap-up
 
@@ -177,4 +165,8 @@ https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-p
 
 == 🙏 Thank you 🙏
 
-=== ❓️ Questions ❓️
+[.stretch]
+image::qr.png[]
+
+[.ref]
+https://github.com/slauth/dev-prod-o11y-parity[github.com/slauth/dev-prod-o11y-parity]
