@@ -3,3 +3,4 @@ management:
 
 spring:
   application.name: dev-prod-o11y-parity
+  profiles.active: dev
